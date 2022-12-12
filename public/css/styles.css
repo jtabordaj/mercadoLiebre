@@ -1,0 +1,206 @@
+html *{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #EAC926;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    list-style-type: none;
+    color: black;
+    text-decoration: none;
+}
+
+body{
+    background-color: #ebebeb;
+    height: 90vw;
+    width: 100vw;
+}
+
+footer{
+    text-align: center;
+    box-shadow: none;
+}
+
+footer div div p i{
+    font-size: 2em;
+    color: #1259c3;
+    margin-bottom: 10px;
+}
+
+
+img{
+    max-width: 100%;
+    height: auto;
+    width: auto
+}
+
+i{
+    margin-right: 10px;
+}
+
+
+
+
+/* for class, general*/
+
+.startseite{
+    width: 100vw;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.catalogo{
+    margin: auto;
+    text-align: center;
+    width: 100vw;
+}
+
+.titulares{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 35px;
+}
+
+.cuerpo{
+    font-size: 12px;
+}
+
+.descripcion{
+    font-size: 16px;
+    color: #666;
+}
+
+.footer{
+    box-shadow: none;
+}
+
+
+/* class for items for sale */
+
+.listaVenta{
+    width: 100vw;
+    text-align: center;
+
+}
+
+.descProd{
+    border-top: solid 1px #ebebeb;
+    background-color: white;
+    width: 100vw;
+    height: 100%;
+    align-items: center;
+}
+
+.descProd div p{
+    text-align: left;
+    margin: 3px;
+}
+
+.descProd div.camioncito{
+    display:flex;
+    justify-content: flex-end;
+    margin: 3px;
+}
+
+.precio{
+    font-size: 18px;
+}
+
+.descuento{
+    font-size: 16px;
+    color: #39b54a;;
+}
+
+.nombreProducto{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.camioncito{
+    height: 40px;
+    width: 40px;
+    background-color: white ;
+    border: 1px solid #39b54a;
+    border-radius: 50%;
+    display: flex;
+}
+
+.camioncito i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #39b54a;
+}
+
+/* menu burger */
+
+.menuBurger .conIcono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    color: white; 
+    fill: #1259c3; 
+    background-color: #1259c3; 
+    border-color: #1259c3 ;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+}
+
+button .menu i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+
+/* menu de navegacion mobile */ 
+
+@media (max-width: 360px){
+    .startseite{
+        display: none;
+    }
+
+    .descProd div.nombreProducto{
+        display: none;
+    }
+}
+
+/* menu de navegacion tablet y  menu de navegacion desktop */ 
+
+@media (min-width: 361px){
+    .menuBurger{
+        display: none;
+    }
+
+    .listaVenta{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .catalogo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        flex-wrap: wrap;
+    }
+}
+
