@@ -8,8 +8,42 @@ html *{
     font-family: 'Roboto', sans-serif;
 }
 
+/* header */
+
 header{
     background-color: #EAC926;
+}
+
+.leftMenu{
+    justify-content: flex-start;
+    display: flex;
+    width: 46vw;
+}
+
+.rightMenu{
+    justify-content: flex-end;
+    display: flex;
+    width: 46vw;
+    justify-content: flex-end;
+}
+
+.leftMenu ul,
+.rightMenu ul {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.leftMenu ul li,
+.rightMenu ul li{
+    padding: 5px;
+    list-style-type: none;
+}
+
+.leftMenu ul li a,
+.rightMenu ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
 }
 
 header ul li{
@@ -38,11 +72,20 @@ footer div div p i{
     margin-bottom: 10px;
 }
 
-
 img{
     max-width: 100%;
     height: auto;
+    width: auto;
+}
+
+img.mercadoLiebre{
+    max-width: 33%;
+    height: auto;
     width: auto
+}
+
+img.landscape{
+    max-width: auto;
 }
 
 ul li a i{
@@ -54,17 +97,32 @@ ul li a i{
 
 /* for class, general*/
 
+.topOfPage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.topOfPage div{
+    margin: 10px;
+}
+
 .startseite{
-    width: 100vw;
-    margin-left: 0px;
-    margin-right: 0px;
+    display: flex;
+}
+
+.startseite div{
+    display: inline-block;
+    width: 50%;
 }
 
 .catalogo{
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-    width: 90%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .titulares{
@@ -91,12 +149,11 @@ ul li a i{
 /* class for items for sale */
 
 .listaVenta{
-    width: 100%;
+    width: 80%;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    flex-direction: row;
     justify-content: center;
     flex-grow: 1;
 }
@@ -104,15 +161,12 @@ ul li a i{
 
 .descProd{
     display: flex;    
-    flex-direction: column;
     flex-wrap: wrap;
     width: 100vw;
     height: 100%;
     align-items: center;
     border-top: 1px solid #ebebed;
     background-color: white;
-    align-items: baseline;
-    justify-content: flex-start;
     padding: 10px;
     position: relative;
 }
@@ -126,7 +180,7 @@ ul li a i{
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     right: 20px;
     top: -15px;
     color: #39b54a;
@@ -140,16 +194,23 @@ ul li a i{
 
 .precio{
     font-size: 18px;
+    display: inline-block;
+    width: 50%
 }
 
 .descuento{
-    font-size: 16px;
-    color: #39b54a;;
+    font-size: 14px;
+    color: #39b54a;
+    display: inline-block;
+    width: 50%;
+    margin-left: 0px;
 }
 
 .nombreProducto{
+    display: flex;
     font-size: 16px;
     font-weight: bold;
+    align-self: flex-end;
 }
 
 
@@ -172,9 +233,9 @@ button.menu{
     background-color: #1259c3; 
     border-color: #1259c3 ;
     text-align: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
 }
 
 button .menu i{
@@ -189,7 +250,7 @@ button .menu i{
 
 /* menu de navegacion mobile */ 
 
-@media (max-width: 360px){
+@media (max-width: 359px){
     main{
     background-color: #ebebeb
     }
@@ -201,18 +262,12 @@ button .menu i{
     .descProd div.nombreProducto{
         display: none;
     }
-    .catalogo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-        flex-wrap: wrap;
-    }
+
 }
 
 /* menu de navegacion tablet y  menu de navegacion desktop */ 
 
-@media (min-width: 361px){
+@media (min-width: 360px){
     .menuBurger{
         display: none;
     }
@@ -229,4 +284,10 @@ button .menu i{
         flex-wrap: wrap;
     }
 }
+
+@media (min-width: 769px){
+
+}
+    
+
 
