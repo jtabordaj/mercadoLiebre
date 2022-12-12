@@ -40,7 +40,7 @@ img{
     width: auto
 }
 
-i{
+ul li a i{
     margin-right: 10px;
 }
 
@@ -102,12 +102,6 @@ i{
     margin: 3px;
 }
 
-.descProd div.camioncito{
-    display:flex;
-    justify-content: flex-end;
-    margin: 3px;
-}
-
 .precio{
     font-size: 18px;
 }
@@ -124,18 +118,25 @@ i{
 
 
 .camioncito{
-    height: 40px;
-    width: 40px;
-    background-color: white ;
-    border: 1px solid #39b54a;
-    border-radius: 50%;
-    display: flex;
+    height: fit-content;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.camioncito i{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.camioncito{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
     color: #39b54a;
 }
 

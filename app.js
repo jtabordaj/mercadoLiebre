@@ -1,7 +1,8 @@
-const express = require("express");
-const app = express()
+const express = require('express');
+const app = express();
+const path = require('path');
 
-console.log(app)
+app.use(express.static('public'));
 
 // Instanciar server
 
@@ -11,16 +12,8 @@ app.listen(3030, () =>
 
 // path
 
-const path = require('path');
-
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/home.html'))
+    res.sendFile(path.resolve('./views/home.html'))
 })
 
-app.get('/public/css', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/css'))
-})
 
-app.get('/public/img/logo-mercado-liebre.svg', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/img/logo-mercado-liebre.svg'))
-})
