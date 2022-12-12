@@ -1,3 +1,9 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 html *{
     font-family: 'Roboto', sans-serif;
 }
@@ -16,10 +22,9 @@ header ul li a{
     text-decoration: none;
 }
 
-body{
+main{
     background-color: #ebebeb;
-    height: 90vw;
-    width: 100vw;
+    margin: auto;
 }
 
 footer{
@@ -57,14 +62,16 @@ ul li a i{
 
 .catalogo{
     margin: auto;
+    padding: 10px;
     text-align: center;
-    width: 100vw;
+    width: 90%;
 }
 
 .titulares{
+    background-color: #ebebeb;
     font-size: 24px;
     font-weight: bold;
-    margin-top: 35px;
+    padding-top: 35px;
 }
 
 .cuerpo{
@@ -84,18 +91,47 @@ ul li a i{
 /* class for items for sale */
 
 .listaVenta{
-    width: 100vw;
-    text-align: center;
-
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
 }
 
+
 .descProd{
-    border-top: solid 1px #ebebeb;
-    background-color: white;
+    display: flex;    
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 100vw;
     height: 100%;
     align-items: center;
+    border-top: 1px solid #ebebed;
+    background-color: white;
+    align-items: baseline;
+    justify-content: flex-start;
+    padding: 10px;
+    position: relative;
 }
+
+.descProd i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: relative;
+    right: 20px;
+    top: -15px;
+    color: #39b54a;
+}
+
 
 .descProd div p{
     text-align: left;
@@ -117,28 +153,6 @@ ul li a i{
 }
 
 
-.camioncito{
-    height: fit-content;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-
-.camioncito{
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-    color: #39b54a;
-}
 
 /* menu burger */
 
@@ -176,12 +190,23 @@ button .menu i{
 /* menu de navegacion mobile */ 
 
 @media (max-width: 360px){
+    main{
+    background-color: #ebebeb
+    }
+
     .startseite{
         display: none;
     }
 
     .descProd div.nombreProducto{
         display: none;
+    }
+    .catalogo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        flex-wrap: wrap;
     }
 }
 
