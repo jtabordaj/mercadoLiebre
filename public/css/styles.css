@@ -80,13 +80,12 @@ img{
 }
 
 img.mercadoLiebre{
-    max-width: 33%;
     height: auto;
-    width: auto
+    width: 49vw
 }
 
 img.landscape{
-    max-width: auto;
+    width: 100vw;
 }
 
 ul li a i{
@@ -100,13 +99,38 @@ ul li a i{
 
 .topOfPage{
     display: flex;
+    position: relative;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 5vw;
 }
 
-.topOfPage div{
-    margin: 10px;
+.searchBar{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 49vw;
+    height: 30px;
+}
+
+
+.searchForm{
+    width: 99%;    
+    height: 7vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 2vw;
+    border-radius: 10px;
+    border: 0px
+}
+
+.compraCuotas{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .startseite{
@@ -297,6 +321,26 @@ button .menu i{
         text-decoration: none;
         color: black;
         font-size: 20px;
+    }
+    
+    .searchBar{
+        padding-left: 20px;
+        width: 32vw;
+        height: 30px;
+    }
+
+    .compraCuotas{
+        width: 32vw;
+    }
+    
+    .searchForm{
+        width: 99%;
+        height: 4vw;
+    }
+
+    img.mercadoLiebre{
+        height: auto;
+        width: 33vw
     }
 }
     
