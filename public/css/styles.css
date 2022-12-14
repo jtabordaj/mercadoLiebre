@@ -8,22 +8,36 @@ html *{
     font-family: 'Roboto', sans-serif;
 }
 
-/* header */
+/* document parts */
 
 header{
     background-color: #EAC926;
 }
 
+main{
+    background-color: #ebebeb;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+footer{
+    padding-top: 5vw;
+    text-align: center;
+    box-shadow: none;
+}
+
+/* header parts */
+
 .leftMenu{
     justify-content: flex-start;
     display: flex;
-    width: 46vw;
+    width: 50vw;
 }
 
 .rightMenu{
     justify-content: flex-end;
     display: flex;
-    width: 46vw;
+    width: 50vw;
     justify-content: flex-end;
 }
 
@@ -35,7 +49,7 @@ header{
 
 .leftMenu ul li,
 .rightMenu ul li{
-    padding: 5px;
+    padding: 15px;
     font-size: 10px;
     list-style-type: none;
 }
@@ -57,21 +71,6 @@ header ul li a{
     text-decoration: none;
 }
 
-main{
-    background-color: #ebebeb;
-    margin: auto;
-}
-
-footer{
-    text-align: center;
-    box-shadow: none;
-}
-
-footer div div p i{
-    font-size: 2em;
-    color: #1259c3;
-    margin-bottom: 10px;
-}
 
 img{
     max-width: 100%;
@@ -86,16 +85,13 @@ img.mercadoLiebre{
 
 img.landscape{
     width: 100vw;
+    height: auto;
+    margin-bottom: -1vw;
 }
 
 ul li a i{
     margin-right: 10px;
 }
-
-
-
-
-/* for class, general*/
 
 .topOfPage{
     display: flex;
@@ -135,12 +131,44 @@ ul li a i{
 
 .startseite{
     display: flex;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
 }
 
-.startseite div{
-    display: inline-block;
-    width: 50%;
+
+/* menu burger */
+
+.menuBurger .conIcono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+button.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    color: white; 
+    fill: #1259c3; 
+    background-color: #1259c3; 
+    border-color: #1259c3 ;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+button .menu i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+/* Main */
 
 .catalogo{
     width: 100%;
@@ -239,43 +267,159 @@ ul li a i{
 }
 
 
+/* footer */
 
-/* menu burger */
-
-.menuBurger .conIcono{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer div div p i{
+    font-size: 2em;
+    color: #1259c3;
+    margin-bottom: 10px;
 }
 
-button.menu{
+
+/* Register page */
+
+.registerContainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    color: white; 
-    fill: #1259c3; 
-    background-color: #1259c3; 
-    border-color: #1259c3 ;
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    border-radius: 15px;
+    padding: 32px 32px;
 }
 
-button .menu i{
+.formRegister{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
 }
 
+.registerTitle{
+    padding-bottom: 15px;
+}
 
+.formRegister label{
+    margin: 0 0 5px 5px;
+    color: rgb(25, 25, 25);
+    padding-top: 10px;
+    font-weight: bold;
+}
 
+.registerInput{
+    background-color: white;
+    padding: 15px;
+    border: 3px solid #ebebeb;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.formRegister button.send{
+    align-self: center;
+    margin-top: 30px;
+    width: 50%;
+    height: 50px;
+    font-size: 18px;
+    border: 3px solid #1259c3;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    background-color: #1259c3;
+    color: white;
+    cursor: pointer;
+}
+
+.formRegister button.delete{
+    align-self: center;
+    margin-top: 30px;
+    width: 50%;
+    height: 50px;
+    font-size: 18px;
+    border: 3px solid #c31224;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    background-color: #c31224;
+    color: white;
+    cursor: pointer;
+}
+
+.radioSelect{
+    padding: 10px 10px 10px 10px;
+    align-self: center;
+}
+
+.checkboxSelect{
+    padding: 7px 7px 7px 7px;
+    align-self: center;
+}
+
+/* Login page */
+
+.loginContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    width: 65vw;
+    height: auto;
+    margin: auto;
+    border-radius: 15px;
+    padding: 32px 32px;
+}
+
+.loginTitle{
+    font-size: 20px;
+    font-weight: bolder;
+    width: 100%;
+    padding: 10px;
+}
+
+.formLogin{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.formLogin label{
+    margin: 0 0 5px 5px;
+    color: rgb(25, 25, 25);
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.formLogin button.send{
+    align-self: center;
+    margin-top: 30px;
+    width: 50%;
+    height: 50px;
+    font-size: 18px;
+    border: 3px solid #1259c3;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    background-color: #1259c3;
+    color: white;
+    cursor: pointer;
+}
 
 /* menu de navegacion mobile */ 
 
-@media (max-width: 359px){
+@media (min-width: 0px) and (max-width: 359px){
     main{
     background-color: #ebebeb
     }
@@ -293,11 +437,15 @@ button .menu i{
         grid-template-columns: repeat(1, 80vw);
     }
 
+    .registerContainer, .loginContainer{
+        width: 99vw
+    }
+
 }
 
 /* menu de navegacion tablet y  menu de navegacion desktop */ 
 
-@media (min-width: 360px){
+@media (min-width: 360px) and (max-width: 768px){
     .menuBurger{
         display: none;
     }
@@ -309,9 +457,20 @@ button .menu i{
     .catalogo{
         grid-template-columns: repeat(2, 50vw);
     }
+
+    .registerContainer, .loginContainer{
+        width: 99vw
+    }
+    
 }
 
 @media (min-width: 769px){
+
+    .menuBurger{
+        display: none;
+    }
+
+
     .catalogo{
         grid-template-columns: repeat(4, 25vw);
     }
@@ -321,6 +480,10 @@ button .menu i{
         text-decoration: none;
         color: black;
         font-size: 20px;
+    }
+
+    .listaVenta{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     
     .searchBar{
