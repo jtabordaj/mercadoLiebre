@@ -21,9 +21,10 @@ main{
 }
 
 footer{
+    display: flex;
+    justify-content: space-around;
     padding-top: 5vw;
-    text-align: center;
-    box-shadow: none;
+    padding-bottom: 5vw;
 }
 
 /* header parts */
@@ -118,8 +119,23 @@ ul li a i{
     align-items: center;
     display: flex;
     margin-top: 2vw;
-    border-radius: 10px;
+    border-radius: 1px;
     border: 0px
+}
+
+.buttonForm{
+    background-color: white;
+    border: 0px;
+    border-radius: 1px;
+    margin-top: 2vw;
+    height: 4vw;
+    width: 9%;
+}
+
+.buttonForm i{
+    height: 100%;
+    margin-top: 50%;
+    justify-self: center;
 }
 
 .compraCuotas{
@@ -195,7 +211,26 @@ button .menu i{
 }
 
 .footer{
-    box-shadow: none;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.containerFooter{
+    margin-top: 40px;
+    margin-right: 20px;
+    max-width: 250px;
+    text-align: center;
+    margin: auto;
+}
+
+.containerFooter p i{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+    transition-duration: 250ms;
 }
 
 
@@ -264,15 +299,7 @@ button .menu i{
     font-size: 16px;
     font-weight: bold;
     align-self: flex-end;
-}
-
-
-/* footer */
-
-footer div div p i{
-    font-size: 2em;
-    color: #1259c3;
-    margin-bottom: 10px;
+    opacity: 0;
 }
 
 
@@ -408,13 +435,18 @@ footer div div p i{
     width: 50%;
     height: 50px;
     font-size: 18px;
-    border: 3px solid #1259c3;
+    border: 3px solid #0033fd;
     border-radius: 5px;
     font-weight: 600;
     transition: background-color 0.5s;
-    background-color: #1259c3;
+    background-color: #0033fd;
     color: white;
     cursor: pointer;
+}
+
+.formLogin button:hover{
+    background-color:#0022AA;
+    border-color: #0022AA;
 }
 
 /* menu de navegacion mobile */ 
@@ -428,7 +460,7 @@ footer div div p i{
         display: none;
     }
 
-    .descProd div.nombreProducto{
+    .nombreProducto{
         display: none;
     }
 
@@ -441,11 +473,15 @@ footer div div p i{
         width: 99vw
     }
 
+    .buttonForm{
+        height: 7vw;
+        width: 9%;
+    }
 }
 
 /* menu de navegacion tablet y  menu de navegacion desktop */ 
 
-@media (min-width: 360px) and (max-width: 768px){
+@media (min-width: 359px) and (max-width: 768px){
     .menuBurger{
         display: none;
     }
@@ -458,13 +494,23 @@ footer div div p i{
         grid-template-columns: repeat(2, 50vw);
     }
 
+    .nombreProducto{
+        display: block;
+        opacity: 1.0
+    }
+
     .registerContainer, .loginContainer{
         width: 99vw
+    }
+
+    .buttonForm{
+        height: 7vw;
+        width: 9%;
     }
     
 }
 
-@media (min-width: 769px){
+@media (min-width: 768px){
 
     .menuBurger{
         display: none;
@@ -482,8 +528,19 @@ footer div div p i{
         font-size: 20px;
     }
 
-    .listaVenta{
+    .listaVenta:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        transition-duration: 500ms;
+    }
+
+    .listaVenta:hover .descProd .nombreProducto{
+        opacity: 1.0;
+        transition-duration: 250ms;
+    }
+
+    .listaVenta:hover .descProd i{
+        transform: rotateZ(-90deg);
+        transition-duration: 750ms;
     }
     
     .searchBar{
@@ -497,13 +554,28 @@ footer div div p i{
     }
     
     .searchForm{
-        width: 99%;
+        width: 90%;
         height: 4vw;
+    }
+
+    .buttonForm{
+        height: 4vw;
+        width: 9%;
+    }
+
+    .buttonForm i{
+        height: 100%;
     }
 
     img.mercadoLiebre{
         height: auto;
         width: 33vw
+    }
+
+    .containerFooter:hover p i{
+        font-size: 2em;
+        color: #39b54a;
+        margin-bottom: 10px;
     }
 }
     
