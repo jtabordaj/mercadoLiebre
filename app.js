@@ -6,9 +6,16 @@ app.use(express.static('public'));
 
 // Instanciar server
 
-app.listen(3030, () =>
+const port = process.env.PORT || 3001;
+
+app.listen(port, () =>
     console.log("Server online, all systems nominal")
 )
+
+// Esto para levantarlo en local
+// app.listen(3030, () =>
+//     console.log("Server online, all systems nominal")
+// )
 
 // path
 
